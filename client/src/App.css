@@ -1,0 +1,240 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* app styling */
+
+.App{
+  text-align: center;
+  height:100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(214, 208, 208);
+}
+
+/* join container styling */
+
+.joinChatContainer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 40%;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px 10px;
+}
+
+.joinChatContainer h3{
+  margin-bottom: 20px;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.joinChatContainer input{
+  width: 80%;
+  height: 40px;
+  margin: 20px 0px;
+  font-size: 20px;
+  padding: 0px 5px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid rgb(71, 71, 71);
+  transition: 0.5s;
+}
+
+.joinChatContainer input:focus{
+  border-bottom: 2px solid rgb(71, 44, 172);
+}
+
+.joinChatContainer button{
+  width: 210px;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: rgb(71, 44, 172);
+  color:white;
+  border: none;
+}
+
+.joinChatContainer button:hover{
+  background-color: rgb(107, 88, 173);
+  cursor: pointer;
+}
+
+/* join alert styling */
+
+.join-alert{
+  position: absolute;
+  top: 15px;
+  height: 45px;
+  width: 30%;
+  background-color: rgb(126, 235, 126);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  color: white;
+}
+
+.join-alert button{
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: white;
+  background: transparent;
+  font-size: 17px;
+}
+
+.join-alert button:hover{
+  background-color: rgb(154, 243, 154);
+}
+
+/* chat window styling */
+
+.chat-window{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.chat-window .chat-body{
+  height: calc(100vh - 90px);
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow-y: auto;
+  background-color: white;
+  border: none;
+}
+
+.chat-window .chat-body::-webkit-scrollbar{
+  width: 8px;
+}
+
+.chat-window .chat-body::-webkit-scrollbar-thumb{
+  background-color: rgb(101, 101, 102);
+}
+
+.chat-container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.chat-footer{
+  margin: 10px 0px 30px 0px;
+  width: 100%;
+}
+
+.chat-footer input{
+  width: 92%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0px 10px;
+  background-color: white;
+  border: none;
+}
+
+.chat-footer input::placeholder{
+  color: rgb(58, 57, 57);
+}
+
+.sent-btn{
+  width: 6%;
+  height: 40px;
+  margin: 0px 10px;
+  background-color: rgb(71, 44, 172);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+.chat-window .chat-body .message-container{
+  width: 100%;
+  height: 100%;
+}
+
+.chat-window .chat-body .message-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-window .chat-body .message{
+  height: auto;
+  padding:10px;
+  display: flex;
+}
+
+.chat-window .chat-body .message .message-content{
+  width:auto;
+  height: auto;
+  min-height: 30px;
+  max-width: 150px;
+  display: flex;
+  align-items: center;
+  margin: 0px 5px;
+  padding: 0px 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#you{
+  justify-content: flex-start;
+}
+
+#you .message-content{
+  background-color: rgb(154, 243, 154);
+  border-radius: 8px 8px 8px 0px;
+  text-align: left;
+  color: black;
+}
+
+#you .message-meta{
+  justify-content: flex-start;
+  margin-left: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+
+#other{
+  justify-content: flex-end;
+}
+
+#other .message-content{
+  background-color:rgb(107, 88, 173);
+  border-radius: 8px 8px 0px 8px;
+  text-align: right;
+  color: white;
+
+}
+
+#other .message-meta{
+  justify-content: flex-start;
+  margin-left: 5px;
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.chat-footer button:hover{
+  cursor: pointer;
+}
+
+.chat-footer input{
+  font-size: 20px;
+}
