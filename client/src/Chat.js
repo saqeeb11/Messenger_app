@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import scrollToBottom from '../node_modules/react-scroll-to-bottom'
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
@@ -43,7 +43,7 @@ function Chat({ socket, username, room }) {
       <button onClick={() => setjoinstatus(false)}>X</button>
       </div> : ""}
       <div className="chat-body">
-    <div className="message-container">
+    <ScrollToBottom className="message-container">
       
         {messageList.map((messageContent) => {
           return (
@@ -63,7 +63,7 @@ function Chat({ socket, username, room }) {
             </div>
           );
         })}
-         </div>
+         </ScrollToBottom>
       </div>
       <div className="chat-footer">
         <input
